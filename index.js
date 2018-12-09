@@ -7,7 +7,7 @@ const expire = (ms,name='Promise') =>  new Promise((resolve, reject) => {
 });
 
 const isAPromise = promise => promise instanceof Promise;
-const reflect = promise => promise.then(v => ({v, status: "resolved" }), e => ({e, status: "rejected" }));
+const reflect = promise => promise.then(val => ({val, status: "resolved" }), err => ({err, status: "rejected" }));
 
 const timeout = (promise, ms, name = 'Promise') => {
     if(!isAPromise(promise))
