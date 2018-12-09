@@ -1,0 +1,25 @@
+{
+  "name": "cofu",
+  "version": "1.0.0",
+  "description": "Promise concurrency patterns made simple",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerac/cofu.git"
+  },
+  "keywords": [
+    "promise",
+    "concurrency",
+    "patterns",
+    "promises"
+  ],
+  "author": "nerac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nerac/cofu/issues"
+  },
+  "homepage": "https://github.com/nerac/cofu#readme"
+}
