@@ -3,6 +3,9 @@
 NPM module to simplify promises concurrency patterns
 
 
+[![](https://img.shields.io/npm/v/cofu.svg)](https://npmjs.com/package/cofu)
+[![install size](https://packagephobia.now.sh/badge?p=cofu)](https://packagephobia.now.sh/result?p=cofu)
+
 Usage:
 
 ```
