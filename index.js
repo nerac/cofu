@@ -1,3 +1,5 @@
+//Trick to transform Promises into functors
+Promise.prototype.map = Promise.prototype.then;
 
 const expire = (ms,name='Promise') =>  new Promise((resolve, reject) => {
     let id = setTimeout(() => {
@@ -17,8 +19,10 @@ const timeout = (promise, ms, name = 'Promise') => {
    return Promise.race([promise,expire(ms,name)]);
 }
 
-const first = (...promises) => Promise.race(promises);
-const all = (...promises) => Promise.all(promises);
-const any = (...promises) => Promise.all(promises.map(reflect));
+const firstIfArray = arr => Array.isArray(arr[0]) ? arr[0] : arr;
+
+const first = (...promises) => Promise.race(firstIfArray(promises));
+const all = (...promises) => Promise.all(firstIfArray(promises));
+const any = (...promises) => Promise.all(firstIfArray(promises).map(reflect));
 
 module.exports = {all, first, timeout, any};
